@@ -4,5 +4,5 @@
 
 /* Google Fonts */
 body {
-  @apply bg-white text-black font-sans m-0 p-0;
+  @apply bg-bonewhite text-black font-sans m-0 p-0;
 }
