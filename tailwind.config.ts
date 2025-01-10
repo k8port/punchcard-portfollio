@@ -15,6 +15,7 @@ export default {
         lobsterTwo: ["Lobster Two", "sans-serif"],
       },
       colors: {
+        midnight: "#191970", // midnight blue
         bonewhite: "#F9F6EE", // bone white
         deadwhite: "#FFDEAD", // dead white
         pistachio: "#F5F5DC", // pistachio
@@ -39,7 +40,6 @@ export default {
         tropicsBlue: "#A7DBD8", // tropics blue
         mintGreen: "#BAFCA2", // mint green
         yellow: "#FFDB58", // yellow
-        midnightBlue: "#191970", // midnight blue
         agedParchment: "#F8ECD5", // aged parchment
         darkTeal: "#2B4F4F", // dark teal
         industrialGray: "#3C3C3C", // industrial gray
@@ -49,9 +49,8 @@ export default {
         deepCopper: "#8D5524", // deep copper
         goldenYellow: "#D4AF37", // golden yellow
       },
-      boxShadow: {
-        card: "inset 0 2px 4px 0 rgb(136 136 136 / 0.25)",
-        button: "5px 5px 0px #000",
+      dropShadow: {
+        'section': "8px 8px 8px 0 rgb(255 255 255 / 0.35)",
       },
       plugins: [require("tailwind-scrollbar")],
     },

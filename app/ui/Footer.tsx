@@ -5,16 +5,15 @@ export default function Footer() {
         w-full 
         max-w-[1440px] 
         mx-auto
-        bg-[rgba(25,25,112,0.9)]
-        text-alabaster
-        font-lobsterTwo
+        bg-midnight/90
+        text-vanilla
+        font-lobster
         flex
         items-center
         justify-center
-        p-2
-        md:p-4
+        p-1
+        md:p-2
         border-none
-        text-lg
       `}>
         <p>© 2025 Kate Portalatin. All rights reserved.</p>
       </footer>

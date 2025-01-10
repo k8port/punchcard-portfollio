@@ -11,9 +11,6 @@ body {
   background-attachment: scroll;
   box-sizing: border-box;
   align-self: stretch;
-  border: thin solid #edeade;
-  border-top: none;
-  overflow-y: auto;
   scrollbar-gutter: stable;
 
   /* Scrollbar styles */
