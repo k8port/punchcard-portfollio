@@ -12,12 +12,12 @@ export default function PunchCard({ children }: PunchCardProps) {
       id="home"
       className="
         relative
-        w-1/2
+        w-full
         p-6
-        bg-parchment
-        shadow-punch
-        border-double 
-        border-gray-600
+        bg-pistachio
+        shadow-card
+        border
+        border-ivory
       "
     >
 
@@ -25,13 +25,13 @@ export default function PunchCard({ children }: PunchCardProps) {
       <div className="relative z-10 mt-2">{children}</div>
 
       {/* Optional: background or side image */}
-      <Image
+      {/* <Image
         src="/jacquard-punchcard-deadwhite.png"
         alt="Jacquard Punch Card Machine Sketch"
         width={800}
         height={800}
         className="absolute top-0 right-0 w-full h-full opacity-80 pointer-events-none"
-      />
+      /> */}
     </section>
   );
 }

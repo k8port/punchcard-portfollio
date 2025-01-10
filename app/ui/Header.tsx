@@ -1,10 +1,15 @@
 // app/ui/Header.tsx
 
+import React from 'react';
+
 export default function Header() {
     return (
-      <header className="flex items-center justify-between px-11 py-8 bg-black text-bonewhite">
-        <h1 className="text-6xl ml-11 pl-11 mt-6 font-alexBrush">K8 Portalatin</h1> 
-        <nav className="flex justify-end mr-8 mt-6 font-inconsolata text-sm"> 
+      <header className="flex items-center justify-end bg-black text-ivory">
+        {/* <h1 className="text-6xl ml-11 pl-11 mt-6 font-alexBrush">
+          K
+          <span className="text-3xl font-alexBrush">8 Portalatin</span>
+        </h1> */}
+        <nav className="flex justify-end mr-8 mt-4 mb-2 font-inconsolata text-sm"> 
           <ul className="flex justify-around space-x-4">
             <li>
               <a href="#home" className="hover:underline">

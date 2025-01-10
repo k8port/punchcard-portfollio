@@ -1,21 +1,14 @@
+import React from "react";
 import type { Metadata } from "next";
 import {
-  Alex_Brush,
   Cormorant_Garamond,
   IBM_Plex_Mono,
-  Inconsolata,
-  Poiret_One,
-  Proza_Libre,
+  Lobster,
+  Lobster_Two,
 } from "next/font/google";
 import "./styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
-
-const alexBrush = Alex_Brush({
-  variable: "--font-alex-brush",
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -29,20 +22,14 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400"],
 });
 
-const inconsolata = Inconsolata({
-  variable: "--font-inconsolata",
+const lobster = Lobster({
+  variable: "--font-lobster",
   subsets: ["latin"],
   weight: ["400"],
 });
 
-const poiretOne = Poiret_One({
-  variable: "--font-poiret-one",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const prozaLibre = Proza_Libre({
-  variable: "--font-proza-libre",
+const lobsterTwo = Lobster_Two({
+  variable: "--font-lobster-two",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -54,15 +41,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${alexBrush.variable} ${cormorantGaramond.variable} ${ibmPlexMono.variable} ${inconsolata.variable} ${poiretOne.variable} ${prozaLibre.variable}`}>
-        <Header />
-        <main className="p-5 bg-pearl">{children}</main>
-        <Footer />
+      <body className={`${cormorantGaramond.variable} ${ibmPlexMono.variable} ${lobster.variable} ${lobsterTwo.variable} h-full`}>
+        <div className="flex flex-col h-full">
+          <Header />
+            <main className="flex-grow p-5">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
