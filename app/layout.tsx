@@ -46,12 +46,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${cormorantGaramond.variable} ${ibmPlexMono.variable} ${lobster.variable} ${lobsterTwo.variable} h-full`}>
-        <div className="flex flex-col h-full">
-          <Header />
-            <main className="flex-grow p-5">{children}</main>
-          <Footer />
-        </div>
+      <body className={` 
+        flex flex-col min-h-screen
+        ${cormorantGaramond.variable} ${ibmPlexMono.variable} 
+        ${lobster.variable} ${lobsterTwo.variable}
+      `}>
+        <Header />
+          <main className="flex-grow p-5">{children}</main>
+        <Footer />
       </body>
     </html>
   );
