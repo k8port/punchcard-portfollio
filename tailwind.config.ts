@@ -49,11 +49,21 @@ export default {
         deepCopper: "#8D5524", // deep copper
         goldenYellow: "#D4AF37", // golden yellow
       },
-      dropShadow: {
-        'section': "8px 8px 8px 0 rgb(255 255 255 / 0.35)",
+      boxShadow: {
+        punchcard: "inset 2px 2px 3px 0 rgba(0,0,0,0.35), 3px 3px 4px 0 rgba(0,0,0,0.35)",
       },
       plugins: [require("tailwind-scrollbar")],
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
+      addUtilities({
+        '.border-punchcard': {
+          'border-width': '3px',
+          'border-style': 'solid',
+          'border-color': theme('colors.lightGreen'),
+        },
+      });
+    },
+  ],
 } satisfies Config;

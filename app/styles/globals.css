@@ -5,9 +5,9 @@
 body {
   @apply text-black font-sans m-0 p-0;
   background-image: url("/images/background-image.png");
-  background-size: 1440px auto;
+  background-size: cover;
   background-position: center;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   box-sizing: border-box;
   align-self: stretch;
@@ -15,7 +15,7 @@ body {
 
   /* Scrollbar styles */
   scrollbar-width: thin;
-  scrollbar-color: #FFA07A transparent;
+  scrollbar-color: #F0EAd6 #87CEEB;
 }
 
 /* Webkit Scrollbar Styles */
@@ -25,16 +25,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent;
+  background: #EDEADE;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #FFA07A;
+  background-color: #FFDEAD;
   border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #FF7A5C;
+  background-color: #FFDEAD;
 }
 
 /* Show scrollbar only on hover/scroll */
@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: #FFA07A;
+    background-color: #FFDEAD;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }

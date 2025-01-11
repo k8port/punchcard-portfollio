@@ -45,15 +45,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={` 
-        flex flex-col min-h-screen
-        ${cormorantGaramond.variable} ${ibmPlexMono.variable} 
-        ${lobster.variable} ${lobsterTwo.variable}
-      `}>
-        <Header />
-          <main className="flex-grow p-5">{children}</main>
-        <Footer />
+    <html lang="en" className="h-full w-full overflow-hidden">
+      <body className={`
+          h-full flex flex-col 
+          m-0 p-0 box-border
+          ${cormorantGaramond.variable} ${ibmPlexMono.variable} 
+          ${lobster.variable} ${lobsterTwo.variable}
+        `}>
+        <Header className="sticky top-0 z-50" />
+        <main className="flex-grow w-full overflow-y-auto">
+            {children}
+            <Footer />
+        </main>
       </body>
     </html>
   );
