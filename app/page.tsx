@@ -9,9 +9,9 @@ export default function HomePage() {
       <div className="relative overflow-hidden">
         {/* Punch Card Section */}
         <PunchCard>
-          <h1 className="font-poiret text-2xl font-thin mb-4">About Me</h1>
-          <div className="font-ibmPlexMono text-xs leading-relaxed text-black mb-2">
-            <p className="mb-3">I am a results-driven Software Engineer with 10+ yearsof experience building robust, scalable, and user-centric enterprise systems.
+          <h1 className="font-lobster font-bold text-3xl text-left text-paleMint my-2 pb-4 text-stroke-midnight">About Me</h1>
+          <div className="font-crimsonText text-sm leading-relaxed text-black mb-2">
+            <p className="mb-3">I am a results-driven Software Engineer with 10+ years of experience building robust, scalable, and user-centric enterprise systems.
               With expertise spanning intuitive front-end interfaces, resilient back-end systems, legacy modernizations, and greenfield applications,
               I consistently deliver high-quality, impactful software solutions.</p>
             <p className="mb-3">My background in design gives me a unique perspective, enabling me to craft enterprise-grade systems rooted in thoughtful UX principles

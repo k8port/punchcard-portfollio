@@ -10,9 +10,9 @@ export default {
     extend: {
       fontFamily: {
         cormorantGaramond: ['"Cormorant Garamond"', "sans-serif"],
-        ibmPlexMono: ['"IBM Plex Mono"', "sans-serif"],
+        crimsonText: ['"Crimson Text"', "sans-serif"],
         lobster: ["Lobster", "sans-serif"],
-        lobsterTwo: ["Lobster Two", "sans-serif"],
+        cutiveMono: ["Cutive Mono", "sans-serif"],
       },
       colors: {
         midnight: "#191970", // midnight blue

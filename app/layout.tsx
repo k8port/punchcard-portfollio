@@ -2,9 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import {
   Cormorant_Garamond,
-  IBM_Plex_Mono,
   Lobster,
-  Lobster_Two,
+  Crimson_Text,
+  Cutive_Mono,
 } from "next/font/google";
 import "./styles/globals.css";
 import Header from "./ui/Header";
@@ -16,10 +16,10 @@ const cormorantGaramond = Cormorant_Garamond({
   weight: ["400", "700"],
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
+const crimsonText = Crimson_Text({
+  variable: "--font-crimson-text",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "700"],
 });
 
 const lobster = Lobster({
@@ -28,10 +28,10 @@ const lobster = Lobster({
   weight: ["400"],
 });
 
-const lobsterTwo = Lobster_Two({
-  variable: "--font-lobster-two",
+const cutiveMono = Cutive_Mono({
+  variable: "--font-cutive-mono",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"], 
 });
 
 export const metadata: Metadata = {
@@ -49,8 +49,8 @@ export default function RootLayout({
       <body className={`
           h-full flex flex-col 
           m-0 p-0 box-border
-          ${cormorantGaramond.variable} ${ibmPlexMono.variable} 
-          ${lobster.variable} ${lobsterTwo.variable}
+          ${cormorantGaramond.variable} ${crimsonText.variable} 
+          ${lobster.variable} ${cutiveMono.variable}
         `}>
         <Header className="sticky top-0 z-50" />
         <main className="flex-grow w-full overflow-y-auto">

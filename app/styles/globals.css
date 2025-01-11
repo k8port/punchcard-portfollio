@@ -55,3 +55,25 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@layer utilities {
+  .text-stroke-pink {
+    -webkit-text-stroke: 2px #FFC0CB;
+    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+  }
+  .text-stroke-midnight {
+    -webkit-text-stroke: 0.5px #191970;
+    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+  }
+  .text-stroke-paleMint {
+    -webkit-text-stroke: 2px #BAFCA2;
+    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+  }
+  .text-stroke-terracotta {
+    -webkit-text-stroke: 2px #FF7A5C;
+    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+  }
+  .text-stroke-salmon {
+    -webkit-text-stroke: 0.5px #FFA07A;
+    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+  }
+}
