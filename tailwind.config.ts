@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+
 
 export default {
   content: [
@@ -52,18 +54,32 @@ export default {
       boxShadow: {
         punchcard: "inset 2px 2px 3px 0 rgba(0,0,0,0.35), 3px 3px 4px 0 rgba(0,0,0,0.35)",
       },
-      plugins: [require("tailwind-scrollbar")],
+      minHeight: {
+        landscape: 'var(--landscape-min-height)',
+      },
+      margin: {
+        footer: 'var(--footer-margin)',
+      },
+      screens: {
+        'xs': '768px',
+        'wide-view': '1200px',
+        'long': '1300px',
+      },
     },
   },
   plugins: [
-    function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
+    require("tailwind-scrollbar"),
+    plugin(function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
       addUtilities({
         '.border-punchcard': {
           'border-width': '3px',
           'border-style': 'solid',
           'border-color': theme('colors.lightGreen'),
         },
+        '.footer-dynamic': {
+          'margin-top': 'var(--footer-margin)', 
+        }
       });
-    },
+    }),
   ],
 } satisfies Config;

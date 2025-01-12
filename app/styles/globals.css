@@ -18,6 +18,12 @@ body {
   scrollbar-color: #F0EAd6 #87CEEB;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* Webkit Scrollbar Styles */
 body::-webkit-scrollbar {
   width: 8px;
@@ -56,24 +62,33 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @layer utilities {
-  .text-stroke-pink {
-    -webkit-text-stroke: 2px #FFC0CB;
-    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
-  }
   .text-stroke-midnight {
     -webkit-text-stroke: 0.5px #191970;
     /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
   }
-  .text-stroke-paleMint {
-    -webkit-text-stroke: 2px #BAFCA2;
-    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+}
+
+nav {
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Optional: Style active link */
+nav ul li a {
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #a8e6cf; /* Example hover color */
+}
+
+@layer base {
+  :root {
+    --footer-margin: 24rem;
   }
-  .text-stroke-terracotta {
-    -webkit-text-stroke: 2px #FF7A5C;
-    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
-  }
-  .text-stroke-salmon {
-    -webkit-text-stroke: 0.5px #FFA07A;
-    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+}
+
+@media (min-height: 1300px) {
+  :root {
+    --footer-margin: calc(384px + (100vh - 1300px));
   }
 }

@@ -1,9 +1,15 @@
 // app/ui/Footer.tsx
-export default function Footer() {
+import React from 'react';
+
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className }: FooterProps) {
     return (
       <footer className={`
         w-full 
-        max-w-[1440px] 
+        footer-dynamic
         mx-auto
         bg-midnight/90
         text-vanilla
@@ -11,11 +17,13 @@ export default function Footer() {
         flex
         items-center
         justify-center
-        p-1
-        md:p-2
+        p-0
+        md:p-0
         border-none
+        wide-view:mt-[360px]
+        xs:mt-[900px]
       `}>
-        <p>© 2025 Kate Portalatin. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Kate Portalatin. All rights reserved.</p>
       </footer>
     );
   }

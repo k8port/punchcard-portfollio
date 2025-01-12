@@ -9,6 +9,7 @@ import {
 import "./styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
+import Head from 'next/head';
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -45,17 +46,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full w-full overflow-hidden">
-      <body className={`
-          h-full flex flex-col 
-          m-0 p-0 box-border
-          ${cormorantGaramond.variable} ${crimsonText.variable} 
-          ${lobster.variable} ${cutiveMono.variable}
-        `}>
+    <html lang="en" className="h-full w-full scroll-auto">
+      <body className={`h-full flex flex-col m-0 p-0 box-border ${cormorantGaramond.variable} ${crimsonText.variable} ${lobster.variable} ${cutiveMono.variable}`}>
         <Header className="sticky top-0 z-50" />
-        <main className="flex-grow w-full overflow-y-auto">
+        <main className="w-full overflow-y-auto scroll-mb-0 landscape:min-h">
+          <div className="flex-grow">
             {children}
-            <Footer />
+          </div>
+          <Footer />
         </main>
       </body>
     </html>
