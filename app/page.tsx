@@ -1,7 +1,4 @@
-import Image from "next/image";
 import PunchCard from "./ui/PunchCard";
-import TypewriterButtons from "./ui/TypewriterButtons";
-import LoomSection from "./ui/LoomSection";
 import Head from "next/head";
 
 export default function HomePage() {
@@ -30,7 +27,7 @@ export default function HomePage() {
               tailor role-based access control while reducing system vulnerabilities and simplifying architecture complexity.</p>
             <p className="mb-3">Collaboration and curiosity are central to my work. I thrive in dynamic environments alongside like-minded individuals, to solve complex problems,
                 streamline workflows, and drive innovation. As a mentor and lifelong learner, I value humility and transparency, recognizing that mutual
-              accountability is the cornerstone of success. I'm passionate about asking the right questions and embracing diverse perspectives to uncover
+              accountability is the cornerstone of success. I&apos;m passionate about asking the right questions and embracing diverse perspectives to uncover
               new solutions.</p>
             <p className="mb-3">I am proficient in React, TypeScript, Python, Java, Node.js,SQL, and more. I am adept at building secure, event-driven services,
               APIs, microservices, and distributed systems, leveraging cloud environments and modern DevSecOps practices to deliver scalable and maintainable
@@ -52,14 +49,14 @@ export default function HomePage() {
         {/* Loom Section */}
         {/* <LoomSection id="competencies" title="Core Competencies">
           <p className="leading-relaxed"> */}
-            {/* Skillset outline */}
+            {/* Skills outline */}
           {/* </p>
         </LoomSection> */}
 
         {/* Loom Section */}
         {/* <LoomSection id="open-source" title="Open Source Projects">
           <p className="leading-relaxed"> */}
-            {/* Contriubtions to open source Projects */}
+            {/* Contributions to open source Projects */}
           {/* </p>
         </LoomSection> */} 
       </div>

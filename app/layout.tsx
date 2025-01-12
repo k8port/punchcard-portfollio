@@ -9,7 +9,7 @@ import {
 import "./styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
-import Head from 'next/head';
+
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",

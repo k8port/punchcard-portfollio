@@ -35,6 +35,7 @@ export default {
         peach: "#FFE5B4", // peach
         offwhite: "#FAF9F6", // offwhite
         terracotta: "#FF7A5C", // terracotta
+        bismol: "#FFB2EF", // bismol
         skyBlue: "#87CEEB", // sky blue
         lightGreen: "#90EE90", // light green
         lightSalmon: "#FFA07A", // light salmon
@@ -53,6 +54,7 @@ export default {
       },
       boxShadow: {
         punchcard: "inset 2px 2px 3px 0 rgba(0,0,0,0.35), 3px 3px 4px 0 rgba(0,0,0,0.35)",
+        dropdown: "inset 0 1px 0 0 rgba(125,125,125,0.35), 1px 1px 1px 0 rgba(0,0,0,0.35)",
       },
       minHeight: {
         landscape: 'var(--landscape-min-height)',
@@ -68,8 +70,7 @@ export default {
     },
   },
   plugins: [
-    require("tailwind-scrollbar"),
-    plugin(function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
+    plugin(function ({ addUtilities, theme }) {
       addUtilities({
         '.border-punchcard': {
           'border-width': '3px',
