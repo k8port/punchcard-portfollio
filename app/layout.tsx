@@ -1,39 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
-import {
-  Cormorant_Garamond,
-  Lobster,
-  Crimson_Text,
-  Cutive_Mono,
-} from "next/font/google";
 import "./styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
-
-
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant-garamond",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const crimsonText = Crimson_Text({
-  variable: "--font-crimson-text",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const lobster = Lobster({
-  variable: "--font-lobster",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const cutiveMono = Cutive_Mono({
-  variable: "--font-cutive-mono",
-  subsets: ["latin"],
-  weight: ["400"], 
-});
+import Head from "next/head";
+import { cormorantGaramond, robotoMono, lobster, abrilFatface } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "k8port | Kate Portalatin",
@@ -47,14 +18,38 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full w-full scroll-auto">
-      <body className={`h-full flex flex-col m-0 p-0 box-border ${cormorantGaramond.variable} ${crimsonText.variable} ${lobster.variable} ${cutiveMono.variable}`}>
-        <Header className="sticky top-0 z-50" />
-        <main className="w-full overflow-y-auto scroll-mb-0 landscape:min-h">
-          <div className="flex-grow">
-            {children}
-          </div>
-          <Footer />
+        <Head>
+        <title>Kate Portalatin | Software Engineer</title>
+        <meta
+          name="description"
+          content="Kate Portalatin's portfolio build using Next.js 13, Tailwind CSS, and TypeScript"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="k8port | Kate Portalatin" />
+        <meta
+          property="og:description"
+          content="Kate Portalatin's software portfolio built using Next.js 13."
+        />
+        <meta property="og:url" content="https://k8port.github.io" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body className={`
+        flex flex-col m-0 p-0 box-border 
+        ${cormorantGaramond.className} 
+        ${robotoMono.className} 
+        ${lobster.className} 
+        ${abrilFatface.className}
+      `}>
+       
+        <Header className="fex-none sticky top-0 z-50" />
+        
+        {/* Main Content grows to fill available space, horizontal`overflow hidden */}
+        <main className="flex-grow overflow-x-hidden">
+          {children}
         </main>
+       
+        {/* Footer stays pinned to bottom of page */}
+        <Footer className="flex-none"/>
       </body>
     </html>
   );

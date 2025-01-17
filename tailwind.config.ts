@@ -6,15 +6,18 @@ export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/ui/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/styles/globals.css",
   ],
   theme: {
     extend: {
       fontFamily: {
         cormorantGaramond: ['"Cormorant Garamond"', "sans-serif"],
-        crimsonText: ['"Crimson Text"', "sans-serif"],
         lobster: ["Lobster", "sans-serif"],
-        cutiveMono: ["Cutive Mono", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+        robotoMono: ["Roboto Mono", "sans-serif"],
+        abrilFatface: ["Abril Fatface", "sans-serif"],
       },
       colors: {
         midnight: "#191970", // midnight blue
@@ -36,6 +39,15 @@ export default {
         offwhite: "#FAF9F6", // offwhite
         terracotta: "#FF7A5C", // terracotta
         bismol: "#FFB2EF", // bismol
+        bismol100: "#FFF0FC", // bismol most light
+        bismol200: "#FFE0F9", // bismol very light
+        bismol300: "#FFD1F5", // bismol light 
+        bismol400: "#FFC1F2", // bismol slightly light 
+        bismol500: "#FFB2EF", // bismol
+        bismol600: "#E6A0D7", // bismol slightly dark
+        bismol700: "#B37DA7", // bismol dark
+        bismol800: "#805978", // bismol very dark
+        bismol900: "#4C3548", // bismol darkest
         skyBlue: "#87CEEB", // sky blue
         lightGreen: "#90EE90", // light green
         lightSalmon: "#FFA07A", // light salmon
@@ -51,10 +63,12 @@ export default {
         texturedBrass: "#C0A568", // textured brass
         deepCopper: "#8D5524", // deep copper
         goldenYellow: "#D4AF37", // golden yellow
+        indigo: "#5B5097", // indigo
       },
       boxShadow: {
         punchcard: "inset 2px 2px 3px 0 rgba(0,0,0,0.35), 3px 3px 4px 0 rgba(0,0,0,0.35)",
         dropdown: "inset 0 1px 0 0 rgba(125,125,125,0.35), 1px 1px 1px 0 rgba(0,0,0,0.35)",
+        default: "inset 0 4px 4px 0 rgba(0,0,0,0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25)",
       },
       minHeight: {
         landscape: 'var(--landscape-min-height)',
@@ -79,6 +93,9 @@ export default {
         },
         '.footer-dynamic': {
           'margin-top': 'var(--footer-margin)', 
+        },
+        '.inner-shadow': {
+          'box-shadow': 'inset 0 4px 6px 0 rgba(0,0,0,0.15)',
         }
       });
     }),

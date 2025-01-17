@@ -4,26 +4,18 @@
 
 body {
   @apply text-black font-sans m-0 p-0;
-  background-image: url("/images/background-image.png");
+  background-image: url("/images/background-image_plus-terracotta.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   box-sizing: border-box;
   align-self: stretch;
-  scrollbar-gutter: stable;
 
   /* Scrollbar styles */
   scrollbar-width: thin;
   scrollbar-color: #F0EAd6 #87CEEB;
 }
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /* Webkit Scrollbar Styles */
 body::-webkit-scrollbar {
   width: 8px;
@@ -63,7 +55,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 @layer utilities {
   .text-stroke-midnight {
-    -webkit-text-stroke: 0.5px #191970;
+    -webkit-text-stroke: 0.75px #191970;
     /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
   }
 }
@@ -91,4 +83,8 @@ nav ul li a:hover {
   :root {
     --footer-margin: calc(384px + (100vh - 1300px));
   }
+}
+
+html, body {
+  overflow-x: hidden;
 }

@@ -44,25 +44,25 @@ export default function Header({ className }: HeaderProps) {
           </button>
         </div>
         
-        <nav className={`absolute sm:relative sm:flex sm:space-x-6 right-6 top-12 sm:top-0 w-[30%] sm:w-auto
-          bg-white sm:bg-transparent text-black sm:text-white border sm:border-0 rounded-md
-          shadow-md sm:shadow-none p-0 sm:p-0 space-y-4 sm:space-y-0 transition-all duration-300 ${
-            isOpen ? "block" : "hidden sm:flex"
+        <nav className={`absolute md:relative md:flex md:space-x-6 right-6 top-12 md:top-0 w-[30%] md:w-auto
+          bg-white md:bg-transparent text-black md:text-white border md:border-0 rounded-md
+          shadow-md md:shadow-none p-0 md:p-0 space-y-4 md:space-y-0 transition-all duration-300 ${
+            isOpen ? "block" : "hidden md:flex"
           }`}
         >
-          <ul className="flex flex-col sm:flex-row divide-y-[0.5px] sm:divide-y-0 sm:items-center">
+          <ul className="flex flex-col md:flex-row divide-y-[0.5px] md:divide-y-0 md:items-center">
             {navItems.map((item, idx) => (
               <React.Fragment key={item.href}>
-                <li className="hover:bg-mintGreen active:bg-midnight sm:hover:bg-transparent sm:active:bg-transparent sm:w-full">
+                <li className="hover:bg-mintGreen active:bg-midnight md:hover:bg-transparent md:active:bg-transparent md:w-full">
                   <Link 
                     href={item.href} 
-                    className="block px-4 py-2 rounded-md sm:px-1 text-sm sm:text-sm hover:text-black
-                      sm:hover:text-white hover:font-semibold sm:hover:font-normal active:text-seashell" onClick={() => setIsOpen(false)}>
+                    className="block px-4 py-2 rounded-md md:px-1 text-sm md:text-sm hover:text-black
+                      md:hover:text-white hover:font-semibold md:hover:font-normal active:text-seashell" onClick={() => setIsOpen(false)}>
                     {item.label}
                   </Link>
                 </li>
                 {idx < navItems.length - 1 && (
-                  <li aria-hidden="true" className="hidden sm:inline mx-2">
+                  <li aria-hidden="true" className="hidden md:inline mx-2">
                     <BsGearWideConnected className="text-xs" />
                   </li>
                 )}

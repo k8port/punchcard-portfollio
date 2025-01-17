@@ -21,7 +21,7 @@ export default function Footer({ className }: FooterProps) {
         md:p-0
         border-none
         wide-view:mt-[360px]
-        xs:mt-[900px]
+        md:mt-[900px]
         ${className}
       `}>
         <p>&copy; {new Date().getFullYear()} Kate Portalatin. All rights reserved.</p>
