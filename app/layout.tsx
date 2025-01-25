@@ -4,7 +4,7 @@ import "./styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import Head from "next/head";
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import {
   cormorantGaramond,
   robotoMono,
@@ -56,6 +56,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer className="footer-dynamic" />
+          <SpeedInsights />
         </div>
       </body>
     </html>

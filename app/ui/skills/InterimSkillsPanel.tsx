@@ -2,11 +2,10 @@
 
 import React, { useState } from 'react';
 import { Database, Layout, Terminal, Server } from 'lucide-react';
-// import dynamic from 'next/dynamic';
-import RadarChart from './RadarChart';
+import dynamic from 'next/dynamic';
 
 // Only keep the RadarChart dynamic import
-// const RadarChart = dynamic(() => import('./RadarChart'), { ssr: false });
+const RadarChart = dynamic(() => import('./RadarChart'), { ssr: false });
 
 // Add type for level values
 type DreyfusLevel = 1 | 2 | 3 | 4 | 5;

@@ -4,7 +4,7 @@
 
 body {
   @apply text-black font-sans m-0 p-0;
-  background-image: url("https://res.cloudinary.com/djorzswta/image/upload/v1737840049/mz3phzb7eexxqbza9j0w.png");
+  background-image: url("/images/background/typewriter/background-image_plus-terracotta.png");
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
