@@ -15,6 +15,7 @@
           "scrollbar-gutter: stable"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }

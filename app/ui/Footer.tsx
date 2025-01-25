@@ -1,4 +1,3 @@
-// app/ui/Footer.tsx
 import React from 'react';
 
 interface FooterProps {
@@ -6,26 +5,12 @@ interface FooterProps {
 }
 
 export default function Footer({ className }: FooterProps) {
-    return (
-      <footer className={`
-        w-full 
-        footer-dynamic
-        mx-auto
-        bg-midnight/90
-        text-vanilla
-        font-lobster
-        flex
-        items-center
-        justify-center
-        p-0
-        md:p-0
-        border-none
-        wide-view:mt-[360px]
-        md:mt-[900px]
-        ${className}
-      `}>
-        <p>&copy; {new Date().getFullYear()} Kate Portalatin. All rights reserved.</p>
-      </footer>
-    );
-  }
-  
+  return (
+    <footer
+      className={` w-full bg-midnight/90 text-vanilla font-lobster flex items-center 
+        justify-center p-4 border-none ${className}`}
+    >
+      <p>&copy; {new Date().getFullYear()} Kate Portalatin. All rights reserved.</p>
+    </footer>
+  );
+}

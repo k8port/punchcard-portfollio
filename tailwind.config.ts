@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
-
+import { themeColors, themeMetallics, themeInks, proficiencyScale } from "./app/styles/color/colors";
+import { shadesOfWhite, ashenTints, misspiggyTints, skyblueTints, seashellTints, platinumTints } from "./app/styles/color/shades_tints";
 
 export default {
   content: [
@@ -9,61 +10,33 @@ export default {
     "./app/ui/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/styles/globals.css",
+    "./app/styles/fonts.css",
+    "./app/styles/colors/colors.ts",
+    "./app/styles/icons.ts",
+    "./app/styles/colors/shades_tints.ts",
   ],
   theme: {
     extend: {
       fontFamily: {
         cormorantGaramond: ['"Cormorant Garamond"', "sans-serif"],
         lobster: ["Lobster", "sans-serif"],
-        lato: ["Lato", "sans-serif"],
         robotoMono: ["Roboto Mono", "sans-serif"],
         abrilFatface: ["Abril Fatface", "sans-serif"],
+        charm: ["Charm", "sans-serif"],
+        ibmPlexSans: ["IBM Plex Sans", "sans-serif"],
       },
       colors: {
-        midnight: "#191970", // midnight blue
-        bonewhite: "#F9F6EE", // bone white
-        deadwhite: "#FFDEAD", // dead white
-        pistachio: "#F5F5DC", // pistachio
-        paleMint: "#A8E6CF", // pale mint
-        alabaster: "#EDEADE", // alabaster
-        cream: "#FFFDD0", // cream
-        linen: "#E9DCC9", // linen
-        seashell: "#FFF5EE", // seashell
-        parchment: "#FCF5E5", // parchment
-        pearl: "#E2DFD2", // pearl
-        vanilla: "#F3E5AB", // vanilla
-        eggshell: "#F0EAD6", // eggshell
-        ivory: "#FFFFF0", // ivory
-        cornsilk: "#FFF8DC", // cornsilk
-        peach: "#FFE5B4", // peach
-        offwhite: "#FAF9F6", // offwhite
-        terracotta: "#FF7A5C", // terracotta
-        bismol: "#FFB2EF", // bismol
-        bismol100: "#FFF0FC", // bismol most light
-        bismol200: "#FFE0F9", // bismol very light
-        bismol300: "#FFD1F5", // bismol light 
-        bismol400: "#FFC1F2", // bismol slightly light 
-        bismol500: "#FFB2EF", // bismol
-        bismol600: "#E6A0D7", // bismol slightly dark
-        bismol700: "#B37DA7", // bismol dark
-        bismol800: "#805978", // bismol very dark
-        bismol900: "#4C3548", // bismol darkest
-        skyBlue: "#87CEEB", // sky blue
-        lightGreen: "#90EE90", // light green
-        lightSalmon: "#FFA07A", // light salmon
-        pink: "#FFC0CB", // pink
-        tropicsBlue: "#A7DBD8", // tropics blue
-        mintGreen: "#BAFCA2", // mint green
-        yellow: "#FFDB58", // yellow
-        agedParchment: "#F8ECD5", // aged parchment
-        darkTeal: "#2B4F4F", // dark teal
-        industrialGray: "#3C3C3C", // industrial gray
-        antiqueBlack: "#111111", // antique black
-        sepiaBrown: "#534F32", // sepia brown
-        texturedBrass: "#C0A568", // textured brass
-        deepCopper: "#8D5524", // deep copper
-        goldenYellow: "#D4AF37", // golden yellow
-        indigo: "#5B5097", // indigo
+        // whites
+        ...shadesOfWhite,
+        ...themeMetallics,
+        ...themeInks,
+        ...themeColors,
+        ...ashenTints,
+        ...misspiggyTints,
+        ...skyblueTints,
+        ...seashellTints,
+        ...platinumTints,
+        ...proficiencyScale,
       },
       boxShadow: {
         punchcard: "inset 2px 2px 3px 0 rgba(0,0,0,0.35), 3px 3px 4px 0 rgba(0,0,0,0.35)",
@@ -81,6 +54,9 @@ export default {
         'wide-view': '1200px',
         'long': '1300px',
       },
+      fontSize: {
+        'xs': '0.75rem',
+      }
     },
   },
   plugins: [
@@ -89,15 +65,44 @@ export default {
         '.border-punchcard': {
           'border-width': '3px',
           'border-style': 'solid',
-          'border-color': theme('colors.lightGreen'),
+          'border-color': theme('colors.lightgreen'),
+        },
+        '.bio-label': {
+          'font-family': 'Roboto Mono',
+          'font-size': '0.75rem',
+          'font-weight': 'normal',
+          'color': theme('colors.lightgreen'),
+          'background-color': theme('colors.antiqueblack'),
         },
         '.footer-dynamic': {
           'margin-top': 'var(--footer-margin)', 
         },
         '.inner-shadow': {
           'box-shadow': 'inset 0 4px 6px 0 rgba(0,0,0,0.15)',
-        }
+        },
+        '.inner-shadow-sm': {
+          'box-shadow': 'inset 0 2px 3px 0 rgba(0,0,0,0.05)',
+        },
+        '.motto-text-shadow': {
+          'text-shadow': '1px 1px 0 rgba(120, 120, 120, 0.95)',
+          'color': theme('colors.bonewhite'),
+        },
+        '.motto-shadow': {
+          'box-shadow': 'inset 1px 1px 0 0 rgba(120,120,120,0.15), inset -1px -1px 0 0 rgba(120,120,120,0.15)',
+          'border-color': theme('colors.seashell'),
+        },
+        '.header-shadow': {
+          'text-shadow': '1px 1px 1px rgba(25, 25, 112, 1)',
+          'color': theme('colors.misspiggy_400'),
+        },
+        '.subtopic-text': {
+          'color': '#777',
+          'font-size': '12px',
+          'font-family': 'IBM Plex Sans',
+        },
       });
     }),
   ],
 } satisfies Config;
+
+

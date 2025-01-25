@@ -1,26 +1,25 @@
-
-
 export interface ContentJson {
-    aboutMe: {
-        title: string;
-        content: Array<{
-            p: {
-               text: Array<{
-                sentence: string;
-                order: number;
-               }>;
-               className: string;
-            };
-        }>;
-    };
-    skillsPanel: {
-        title: string;
-        component: string;
-        props: {
-            floatSide: string;
-            className: string;
+    title: string;
+    description: string;
+    sections: {
+        branding: {
+            motto: string;
+            motto_translation: string;
         };
-        skills: Topic[];
+        skillsPanel: {
+            label: string;
+            content: Topic[];
+        };
+        aboutMe: {
+            label: string;
+            content: {
+                who: { text: string; label: string; };
+                what: { text: string; label: string; };
+                why: { text: string; label: string; };
+                where: { text: string; label: string; };
+                when: { text: string; label: string; };
+            };
+        };
     };
 }
 
@@ -33,11 +32,13 @@ export interface Topic {
 
 export interface Subtopic {
     subtopic?: string;
+    subtopicText?: string;
     subtopicList?: Subtopic[] | SubtopicBlock[];
 }
 
 export interface SubtopicBlock {
     subtopic: string;
+    subtopicText?: string;
     iconList: string[];
     level?: DreyfusLevel;
 }
@@ -52,10 +53,10 @@ export enum DreyfusLevel {
     Expert = 4,
 }
 
-export const DreyfusLevelBadgeType = {
-    [DreyfusLevel.Novice]: 'violet',
-    [DreyfusLevel.AdvancedBeginner]: 'blue',
+export const DreyfusLevelBadgeType: Record<DreyfusLevel, "violet" | "blue" | "green" | "yellow" | "red"> = {
+    [DreyfusLevel.Novice]: 'red',
+    [DreyfusLevel.AdvancedBeginner]: 'yellow',
     [DreyfusLevel.Competent]: 'green',
-    [DreyfusLevel.Proficient]: 'yellow', 
-    [DreyfusLevel.Expert]: 'red', 
+    [DreyfusLevel.Proficient]: 'blue',
+    [DreyfusLevel.Expert]: 'violet'
 }

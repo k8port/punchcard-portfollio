@@ -1,59 +1,57 @@
 // app/ui/PunchCard.tsx
-import CardCard from "./CardCard";
+import CardCard from "./punchcard/CardCard";
 import React from "react";
 
 interface AboutMeProps {
-  bio: {
-    title: string;
-    content: Array<{
-      p: {
-        text: Array<{
-          sentence: string;
-          order: number;
-        }>;
-        className: string;
-      };
-    }>;
-  };
-}
+  label: string;
+  className?: string;
+  content: {
+    who: {
+        text: string;
+        label: string;
+      }
+      what: {
+        text: string;
+        label: string;
+      }
+      why: {
+        text: string;
+        label: string;
+      }
+      where: {
+        text: string;
+        label: string;
+      }
+      when: {
+        text: string;
+        label: string;
+      }
+  }
+};
+
 
 export default function AboutMe({
-  bio,
-  floatSide,
+  label,
+  content,
   className,
-}: AboutMeProps & { floatSide: "left" | "right"; className?: string }) {
-  const { title, content } = bio;
+}: AboutMeProps) {
 
   return (
-    <>
-      <CardCard floatSide={floatSide} className={className}>
-        <h1
-          className="font-lobster text-2xl text-left text-paleMint my-2 
-          pb-4 sm:text-3xl text-stroke-midnight"
+    <CardCard className={className}>
+      <h1
+        className="font-lobster text-lg text-left text-palemint text-stroke-header
+          pb-2 sm:text-xl header-shadow my-1"
         >
-          {title}
+          {label}
         </h1>
 
-        <div className="font-cormorantGaramond">
-          {content.map((entry, index) => {
-            // Join all sentences in the 'text' array into one paragraph.
-            const paragraphText = entry.p.text
-            .sort((a, b) => a.order - b.order) // optional if you want to ensure ordered sentences
-            .map((t) => t.sentence)
-            .join(" ");
-
-          return (
-            <React.Fragment key={index}>
-              <p className={entry.p.className}>{paragraphText}</p>
-              {/* If you only want the line between paragraphs, omit it after the last one */}
-              {index < bio.content.length - 1 && (
-                <hr className="border-t-pink border-dotted my-4" />
-              )}
-            </React.Fragment>
-            );
-          })}
+        <div className="font-cormorantGaramond text-sm text-pretty">
+          <p className="pb-2"><span className="bio-label mr-2">[{content.who.label}]:</span> <br /> {content.who.text}</p>
+          <p className="pb-2"><span className="bio-label mr-2">[{content.what.label}]:</span> <br /> {content.what.text}</p>
+          <p className="pb-2"><span className="bio-label mr-2">[{content.why.label}]:</span> <br /> {content.why.text}</p>
+          <p className="pb-2"><span className="bio-label mr-2">[{content.where.label}]:</span> {content.where.text}</p>
+          <p className="pb-2"><span className="bio-label mr-2">[{content.when.label}]:</span> {content.when.text}</p>
         </div>
       </CardCard>
-    </>
   );
 }

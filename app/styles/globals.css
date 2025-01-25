@@ -4,10 +4,10 @@
 
 body {
   @apply text-black font-sans m-0 p-0;
-  background-image: url("/images/background-image_plus-terracotta.png");
+  background-image: url("/images/background/typewriter/background-image_plus-terracotta.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-attachment: scroll;
   box-sizing: border-box;
   align-self: stretch;
@@ -58,6 +58,12 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-text-stroke: 0.75px #191970;
     /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
   }
+  .text-stroke-pearl {
+    -webkit-text-stroke: 0.75px #E2DFD2;
+  }
+  .text-stroke-header {
+    -webkit-text-stroke: 0.5px #FF7A5C;
+  }
 }
 
 nav {
@@ -87,4 +93,12 @@ nav ul li a:hover {
 
 html, body {
   overflow-x: hidden;
+}
+
+/* Add these in your Tailwind CSS configuration */
+.footer-dynamic {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

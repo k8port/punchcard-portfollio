@@ -27,7 +27,7 @@ export default function Header({ className }: HeaderProps) {
   ];
 
   return (
-    <header className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-skyBlue 
+    <header className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-skyblue 
       font-cutiveMono text-white drop-shadow-section px-0 py-0 ${className}`}>
       <div className="flex flex-grow w-full items-center justify-between px-4">
         <span className="font-lobster text-base sm:text-lg md:text-2xl">
@@ -53,7 +53,7 @@ export default function Header({ className }: HeaderProps) {
           <ul className="flex flex-col md:flex-row divide-y-[0.5px] md:divide-y-0 md:items-center">
             {navItems.map((item, idx) => (
               <React.Fragment key={item.href}>
-                <li className="hover:bg-mintGreen active:bg-midnight md:hover:bg-transparent md:active:bg-transparent md:w-full">
+                <li className="hover:bg-mintgreen active:bg-midnight md:hover:bg-transparent md:active:bg-transparent md:w-full">
                   <Link 
                     href={item.href} 
                     className="block px-4 py-2 rounded-md md:px-1 text-sm md:text-sm hover:text-black
