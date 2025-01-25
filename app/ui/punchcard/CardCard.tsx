@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import Image from "next/legacy/image";
+import { CldImage } from 'next-cloudinary';
 
 
 interface CardCardProps {
@@ -26,10 +28,11 @@ return (
         <div className="bg-offwhite/75 relative p-5 group">
             <div className="relative z-10">{children}</div>
 
-            <Image
+            <CldImage
                 src="/images/punchcard_pink.png"
                 alt="Jacquard Loom punch card"
-                layout="fill"
+                width={1000}
+                height={1000}
                 sizes="(max-width: 640px) 100vw,
                        (max-width: 1024px) 50vw,
                        40vw"

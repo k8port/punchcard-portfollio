@@ -1,6 +1,11 @@
 // next.config.ts
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // generate static pages
+  images: {
+    loader: 'custom',
+    loaderFile: './app/lib/imageLoader.ts',
+  },
   // Enable experimental Turbopack support
   experimental: {
     turbo: {

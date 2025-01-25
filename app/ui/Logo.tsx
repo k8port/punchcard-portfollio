@@ -1,18 +1,16 @@
 // app/ui/Logo.tsx
 import React from "react";
-import Image from "next/legacy/image";
 import CustomizableImage from "./CustomizableImage";
 import OrnateBorder from "./OrnateBorder";
+import { CldImage } from "next-cloudinary";
+import content from "@/public/content.json";
 
 interface LogoProps {
   className?: string;
-  logo: {
-    motto: string;
-    motto_translation: string;
-  };
 }
 
-export default function Logo({ className, logo }: LogoProps) {
+export default function Logo({ className }: LogoProps) {
+
   return (
     <div className={`mx-auto ${className}`}>
       {/* Latin text section */}
@@ -25,7 +23,7 @@ export default function Logo({ className, logo }: LogoProps) {
           `}
           borderColor="border-seashell">
           <div className="relative z-10">
-            <h1 className="font-charm font-semibold text-3xl motto-text-shadow">{logo.motto}</h1>
+            <h1 className="font-charm font-semibold text-3xl motto-text-shadow">{content.sections.branding.motto}</h1>
           </div>
         </OrnateBorder>
       </div>
@@ -33,11 +31,10 @@ export default function Logo({ className, logo }: LogoProps) {
       <div className="relative w-full flex justify-center">
         {/* Portrait section */}
         <div className="relative w-[200px] aspect-[333/437] shadow-default border-2">
-          <Image
-            src="/images/portrait.png"
+          <CldImage
+            src="https://res.cloudinary.com/djorzswta/image/upload/v1737840009/buh6otgqpps4v6eeaum3.png"
             alt="Portrait"
             className="object-contain"
-            layout="fill"
             sizes="100vw"
             priority
           />

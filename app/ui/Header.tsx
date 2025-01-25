@@ -1,5 +1,4 @@
-// app/ui/Header.tsx
-'use client'
+'use client';
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -15,7 +14,6 @@ export default function Header({ className }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    console.log('toggleMenu open?', isOpen);
     setIsOpen(!isOpen);
   };
 
