@@ -9,6 +9,7 @@ const nextConfig = {
     //   // Your Turbopack configurations
     // },
   },
+  output: 'export',
   reactStrictMode: true,
   // Remove any Webpack-specific configurations if possible
   // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
