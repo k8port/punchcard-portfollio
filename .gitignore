@@ -5,11 +5,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.pnpm/
 
 # Node.js
 node_modules/
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
 # Next.js build output
 .next/
@@ -66,7 +68,6 @@ yarn-debug.log
 
 # Optional npm cache
 .npm/
-.pnpm/
 
 # Custom temporary files
 *.tmp

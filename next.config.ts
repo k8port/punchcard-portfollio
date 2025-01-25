@@ -3,13 +3,14 @@
 const nextConfig = {
   // Enable experimental Turbopack support
   experimental: {
-    turbo: true,
+    turbo: {
+      "enabled": true,
+    }
     // Optional: specify any Turbopack-specific configurations
     // turbopack: {
     //   // Your Turbopack configurations
     // },
   },
-  output: 'export',
   reactStrictMode: true,
   // Remove any Webpack-specific configurations if possible
   // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
