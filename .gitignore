@@ -1,0 +1,4 @@
+.vscode/
+.next/
+.vercel/
+node_modules/

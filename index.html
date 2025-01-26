@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Redirecting...</title>
-    <!-- Instant redirect: -->
-    <meta http-equiv="refresh" content="0; url=https://k8port-github-io.vercel.app/" />
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="https://k8port-github-io.vercel.app/">click here</a>.</p>
-  </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Instant redirect: change 'https://example.com' to your desired URL -->
+    <meta http-equiv="refresh" content="0; url='https://k8port-github-io.vercel.app/'" />
+
+  <title>Standby...</title>
+
+  <!-- Load the Space Grotesque font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesque:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Remove all default margins/padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fill the screen and center content */
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Space Grotesque', sans-serif;
+      background-color: #EDEADE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Optional styling for the redirect message */
+    .message {
+      text-align: center;
+      font-size: 1.25rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    Standby...redirecting
+  </div>
+</body>
 </html>
