@@ -4,6 +4,8 @@ import "./styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import {
   cormorantGaramond,
   robotoMono,
@@ -53,6 +55,8 @@ export default function RootLayout({
           <Header className="sticky top-0 z-50" />
           <main className="grid grid-cols-12 gap-2">
             {children}
+            <Analytics />
+            <SpeedInsights />
           </main>
           <Footer className="footer-dynamic" />
         </div>
