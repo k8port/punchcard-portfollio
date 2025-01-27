@@ -2,12 +2,12 @@ import React from 'react';
 import Image from "next/legacy/image";
 
 
-interface CardCardProps {
+interface PunchcardProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export default function CardCard({ children, className }: CardCardProps) {
+export default function Punchcard({ children, className }: PunchcardProps) {
 
 return (
     <div className={`

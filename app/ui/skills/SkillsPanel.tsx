@@ -1,5 +1,5 @@
 import React from 'react';
-import CardCard from '../punchcard/CardCard';
+import Punchcard from '../punchcard/Punchcard';
 import { Topic } from '../../lib/types';
 import InterimSkillsPanel from './InterimSkillsPanel';
 
@@ -16,7 +16,7 @@ export default function SkillsPanel({
 }: SkillsPanelProps) {
   
   return (
-    <CardCard className={`${className} p-4 shadow-lg rounded-lg`}>
+    <Punchcard className={`${className} p-4 shadow-lg rounded-lg`}>
       <h1 className="font-lobster text-lg text-left my-1 
         sm:text-xl text-stroke-header header-shadow">
         {label}
@@ -64,6 +64,6 @@ export default function SkillsPanel({
           {/* </div>
         ))} 
       </Carousel> */}
-    </CardCard>
+    </Punchcard>
   );
 }
