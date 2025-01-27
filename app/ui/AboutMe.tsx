@@ -1,5 +1,5 @@
 // app/ui/PunchCard.tsx
-import CardCard from "./punchcard/CardCard";
+import Punchcard from "./punchcard/Punchcard";
 import React from "react";
 
 interface AboutMeProps {
@@ -37,10 +37,9 @@ export default function AboutMe({
 }: AboutMeProps) {
 
   return (
-    <CardCard className={className}>
+    <Punchcard className={className}>
       <h1
-        className="font-lobster text-lg text-left text-palemint text-stroke-header
-          pb-2 sm:text-xl header-shadow my-1"
+        className="text-stroke-header pb-2 header-shadow my-1"
         >
           {label}
         </h1>
@@ -52,6 +51,6 @@ export default function AboutMe({
           <p className="pb-2"><span className="bio-label mr-2">[{content.where.label}]:</span> {content.where.text}</p>
           <p className="pb-2"><span className="bio-label mr-2">[{content.when.label}]:</span> {content.when.text}</p>
         </div>
-      </CardCard>
+      </Punchcard>
   );
 }

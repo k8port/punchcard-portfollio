@@ -93,16 +93,23 @@ export default {
         },
         '.header-shadow': {
           'text-shadow': '1px 1px 1px rgba(25, 25, 112, 1)',
-          'color': theme('colors.misspiggy_400'),
+          'color': theme('colors.skyblue'),
+          'font-size': '30px',
+          'text-align': 'center',
+          'font-family': '"Lobster", serif, italic',
         },
         '.subtopic-text': {
           'color': '#777',
           'font-size': '12px',
           'font-family': 'IBM Plex Sans',
         },
+        '.spacer': {
+          'height': '50px',
+        },
       });
     }),
   ],
 } satisfies Config;
+
 
 

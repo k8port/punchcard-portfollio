@@ -27,6 +27,7 @@ import {
     FaMarkdown,
     FaLinux,
     FaWindows,
+    FaHammer,
  } from "react-icons/fa";
 import { 
     SiTypescript,
@@ -82,7 +83,7 @@ import {
     DiRuby
  } from "react-icons/di";
 import { MdOutlineViewKanban, MdOutlinePhone } from "react-icons/md";
-import { FaBusinessTime, FaGolang, FaC } from "react-icons/fa6";
+import { FaBusinessTime, FaGolang, FaC, FaScrewdriverWrench, FaCompassDrafting, FaPersonDigging } from "react-icons/fa6";
 import { GiThink, GiTeacher, GiStrongMan } from "react-icons/gi";
 import { TbMath } from "react-icons/tb";
 import { RiMentalHealthFill, RiNextjsFill, RiParentFill, RiPresentationLine, RiTailwindCssFill } from "react-icons/ri";
@@ -189,6 +190,10 @@ export const iconMap: Record<string, IconType> = {
     "Conflict Resolution": FaHandshake,
     "Continuous Learning": FaBookOpen,
     "Professional Development": PiStudent,
+    "Hammer": FaHammer,
+    "Screwdriver Wrench": FaScrewdriverWrench,
+    "Compass Drafting": FaCompassDrafting,
+    "Person Digging": FaPersonDigging,
 }
 
 export function getFontAwesomeIcon(iconName: string): IconType | null {
