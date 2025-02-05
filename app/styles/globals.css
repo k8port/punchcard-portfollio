@@ -14,7 +14,7 @@ body {
 
   /* Scrollbar styles */
   scrollbar-width: thin;
-  scrollbar-color: #F0EAd6 #87CEEB;
+  scrollbar-color: #f0ead6 #87ceeb;
 }
 /* Webkit Scrollbar Styles */
 body::-webkit-scrollbar {
@@ -23,16 +23,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #EDEADE;
+  background: #edeade;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #FFDEAD;
+  background-color: #ffdead;
   border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #FFDEAD;
+  background-color: #ffdead;
 }
 
 /* Show scrollbar only on hover/scroll */
@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: #FFDEAD;
+    background-color: #ffdead;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
@@ -59,10 +59,10 @@ body::-webkit-scrollbar-thumb:hover {
     /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
   }
   .text-stroke-pearl {
-    -webkit-text-stroke: 0.75px #E2DFD2;
+    -webkit-text-stroke: 0.75px #e2dfd2;
   }
   .text-stroke-header {
-    -webkit-text-stroke: 0.5px #90EE90;
+    -webkit-text-stroke: 0.5px #90ee90;
   }
 }
 
@@ -87,11 +87,12 @@ nav ul li a:hover {
 
 @media (min-height: 1300px) {
   :root {
-    --footer-margin: calc(384px + (100vh - 1300px));
+    --footer-margin: calc((100vh - 1300px));
   }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 

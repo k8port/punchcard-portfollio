@@ -16,7 +16,10 @@ export default async function HomePage() {
       {/* Logo (Top-left on Desktop, first section on Mobile) */}
       <div className="col-span-6 ">
         <div className="pt-12">
-          <Logo logo={branding} className="relative flex flex-col max-w-4xl mx-auto p-6 bg-pistachio/65 rounded-lg shadow-lg subtopic-text items center gap-4 w-full" />
+          <Logo
+            logo={branding}
+            className="relative flex flex-col max-w-4xl mx-auto p-6 bg-pistachio/65 rounded-lg shadow-lg subtopic-text items center gap-4 w-full"
+          />
         </div>
       </div>
       <div className="col-span-6">
@@ -40,6 +43,6 @@ export default async function HomePage() {
       <div className="col-span-6 p-5">
         <Projects />
       </div>
-      </>
+    </>
   );
 }

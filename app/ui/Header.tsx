@@ -1,5 +1,5 @@
 // app/ui/Header.tsx
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -22,19 +22,26 @@ export default function Header({ className }: HeaderProps) {
     { label: "Home", href: "#home" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
-    { label: "Experience", href: "#experience" },
+    { label: "Resume", href: "#resume" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <header className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-skyblue 
-      font-cutiveMono text-white drop-shadow-section px-0 py-0 ${className}`}>
+    <header
+      className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-palemint shadow-lg 
+      font-ibmPlexSans text-offwhite text-xl drop-shadow-section px-0 py-6 ${className}`}
+    >
       <div className="flex flex-grow w-full items-center justify-between px-4">
         <span className="font-lobster text-base sm:text-lg md:text-2xl">
           Kate Portalatin - Software Engineer
         </span>
-        
+
         <div className="flex space-x-6 my-2 md:hidden">
-          <button onClick={toggleMenu} className="focus:outline-none" aria-label="Toggle menu">
+          <button
+            onClick={toggleMenu}
+            className="focus:outline-none"
+            aria-label="Toggle menu"
+          >
             {isOpen ? (
               <AiOutlineClose className="h-6 w-6" />
             ) : (
@@ -42,8 +49,9 @@ export default function Header({ className }: HeaderProps) {
             )}
           </button>
         </div>
-        
-        <nav className={`absolute md:relative md:flex md:space-x-6 right-6 top-12 md:top-0 w-[30%] md:w-auto
+
+        <nav
+          className={`absolute md:relative md:flex md:space-x-6 right-6 top-12 md:top-0 w-[50%] md:w-auto
           bg-white md:bg-transparent text-black md:text-white border md:border-0 rounded-md
           shadow-md md:shadow-none p-0 md:p-0 space-y-4 md:space-y-0 transition-all duration-300 ${
             isOpen ? "block" : "hidden md:flex"
@@ -53,10 +61,12 @@ export default function Header({ className }: HeaderProps) {
             {navItems.map((item, idx) => (
               <React.Fragment key={item.href}>
                 <li className="hover:bg-mintgreen active:bg-midnight md:hover:bg-transparent md:active:bg-transparent md:w-full">
-                  <Link 
-                    href={item.href} 
+                  <Link
+                    href={item.href}
                     className="block px-4 py-2 rounded-md md:px-1 text-sm md:text-sm hover:text-black
-                      md:hover:text-white hover:font-semibold md:hover:font-normal active:text-seashell" onClick={() => setIsOpen(false)}>
+                      md:hover:text-white hover:font-semibold md:hover:font-normal active:text-seashell"
+                    onClick={() => setIsOpen(false)}
+                  >
                     {item.label}
                   </Link>
                 </li>
