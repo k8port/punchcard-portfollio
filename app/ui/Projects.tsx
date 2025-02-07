@@ -16,7 +16,7 @@ export default function Projects() {
       <FullWidthBanner
         paragraphText="This section is..."
         headingText="Under Construction"
-        className="bg-midnight/65 z-50"
+        className="bg-thunder z-50"
         icons={icons}
       />
       {/* Outer Container */}

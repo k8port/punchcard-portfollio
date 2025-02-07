@@ -4,30 +4,32 @@ import Image from "next/legacy/image";
 interface PunchcardProps {
   children: React.ReactNode;
   className?: string;
+  imageSrc?: string;
 }
 
-export default function Punchcard({ children, className }: PunchcardProps) {
+export default function Punchcard({
+  children,
+  className,
+  imageSrc,
+}: PunchcardProps) {
   return (
     <div
       className={`
       ${className}
-      sm:w-full
-      sm:max-w-full
-      md:w-full
-      md:max-w-full
-      lg:w-full
-      lg:max-w-full
-      mx-4
-      no-x-scroll
-    bg-cornsilk/45 rounded-lg relative border-punchcard border-2
-      group transition-colors duration-300 shadow-punchcard
+      w-full h-full
+      rounded-lg
+      border-punchcard border-2
+    bg-oldlace/50 
+      shadow-md
+      transition-colors duration-300
+      group relative
     `}
     >
-      <div className="bg-offwhite/75 relative p-5 group">
-        <div className="relative z-10">{children}</div>
+      <div className="bg-antiqueblack/75 relative p-5 group w-full h-full">
+        <div className="relative z-10 w-full h-full">{children}</div>
 
         <Image
-          src="/images/punchcard_pink.png"
+          src={imageSrc || "/images/punchcard/punchcard_pink.png"}
           alt="Jacquard Loom punch card"
           layout="fill"
           sizes="(max-width: 640px) 100vw,

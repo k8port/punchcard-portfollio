@@ -103,7 +103,7 @@
               "topic": "Data Structures & Algorithms",
               "topicList": [
                 {
-                  "subtopic": "Data Structures", 
+                  "subtopic": "Data Structures",
                   "subtopicText": "Arrays, Linked Lists, Trees, Graphs, Hash Tables, etc.",
                   "level": "Expert"
                 },
@@ -783,24 +783,28 @@
       "label": "About Me",
       "content": {
         "who": {
-          "text": "Software Engineer obsessed with the intersection of technology and human experience.",
-          "label": "who i am"
+          "text": "I am a Software Engineer obsessed with the intersection of technology and human experience.",
+          "label": "who"
         },
         "what": {
-          "text": "10+ years of full stack development, including technical leadership, multitenant SaaS enterprise platform, and AI.",
-          "label": "what i do"
+          "text": "I have 10+ years of experience in engineering, technical leadership, multitenant SaaS enterprise platform, and AI.",
+          "label": "what"
         },
         "why": {
           "text": "I want to build software that is functional, user-friendly, and  supportive of humanity's higher nature.",
-          "label": "why i do it"
+          "label": "why"
         },
         "where": {
-          "text": "Onsite/Hybrid Dallas-Fort Worth Metroplex. United States remote-ready.",
-          "label": "where i do it"
+          "text": "I am available for onsite/hybrid Dallas-Fort Worth Metroplex locations and remote-ready for anywhere in the US.",
+          "label": "where"
         },
         "when": {
-          "text": "January, 2025 and beyond.",
+          "text": "I am available in January, 2025 and beyond.",
           "label": "when"
+        },
+        "how": {
+          "text": "Contact me via email, phone, or form (coming soon).",
+          "label": "how"
         }
       },
       "projects": {},

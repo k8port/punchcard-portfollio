@@ -4,13 +4,15 @@
 
 body {
   @apply text-black font-sans m-0 p-0;
-  background-image: url("/images/background/typewriter/background-image_plus-terracotta.png");
+  background-color: #bdb7ab;
+  background-image: url("/images/background/loom/background_palesmoke.png");
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
   background-attachment: scroll;
   box-sizing: border-box;
   align-self: stretch;
+  background-blend-mode: multiply;
 
   /* Scrollbar styles */
   scrollbar-width: thin;
@@ -61,7 +63,7 @@ body::-webkit-scrollbar-thumb:hover {
   .text-stroke-pearl {
     -webkit-text-stroke: 0.75px #e2dfd2;
   }
-  .text-stroke-header {
+  . {
     -webkit-text-stroke: 0.5px #90ee90;
   }
 }
@@ -81,7 +83,7 @@ nav ul li a:hover {
 
 @layer base {
   :root {
-    --footer-margin: 24rem;
+    --footer-margin: 8rem;
   }
 }
 

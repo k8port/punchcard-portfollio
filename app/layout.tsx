@@ -13,6 +13,7 @@ import {
   abrilFatface,
   charm,
 } from "./styles/fonts";
+import styles from "./styles/modules/layout.module.css";
 
 export const metadata: Metadata = {
   title: "k8port | Kate Portalatin",
@@ -53,7 +54,9 @@ export default function RootLayout({
       >
         <div>
           <Header className="sticky top-0 z-50" />
-          <main className="grid grid-cols-12 gap-2">
+          <main
+            className={`grid grid-cols-12 grid-rows-8 gap-5 mx-8 min-h-screen ${styles.mainContainer}`}
+          >
             {children}
             <Analytics />
             <SpeedInsights />

@@ -28,7 +28,7 @@ export default function Header({ className }: HeaderProps) {
 
   return (
     <header
-      className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-palemint shadow-lg 
+      className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-electricgrey shadow-lg 
       font-ibmPlexSans text-offwhite text-xl drop-shadow-section px-0 py-6 ${className}`}
     >
       <div className="flex flex-grow w-full items-center justify-between px-4">

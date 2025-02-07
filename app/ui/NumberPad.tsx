@@ -5,24 +5,29 @@ const NumberPad: React.FC = () => {
 
   return (
     <>
-    <div className="flex justify-center items-center w-full">
-      <div className="grid grid-cols-3 gap-2 w-fit p-2">
-        {gridItems.map((_, index) => (
-          <div 
-            key={index} 
-            className="relative w-[60px] h-[60px] rounded-full bg-pearl/75 
-                     flex items-center justify-center
-                     hover:bg-pearl/90 transition-colors duration-200"
-          >
-            <div className="absolute inset-0 border border-ivory rounded-full shadow-punchcard" />
-            <div className="absolute inset-0 border border-antiqueBlack rounded-full shadow-punchcard" />
-            <div className="font-cormorantGaramond text-xl font-bold text-antiqueblack">
-              {index + 1}
+      <div className="flex justify-center items-center w-full">
+        <div className="grid grid-cols-3 gap-2 w-fit p-2">
+          {gridItems.map((_, index) => (
+            <div
+              key={index}
+              className="relative w-[60px] h-[60px] rounded-full bg-texturedbrass
+                     flex items-center justify-center ring-1 ring-goldenyellow
+                     ring-offset-1 ring-offset-darkteal
+                     hover:bg-bisque transition-colors duration-200"
+            >
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-sepiabrown/80 to-pinkgrey pointer-events-none" />
+              {/* Border */}
+              <div className="absolute inset-0 border border-bisque rounded-full shadow-punchcard" />
+              <div className="absolute inset-0 border border-antiqueBlack rounded-full shadow-punchcard" />
+              {/* Number */}
+              <div className="font-cormorantGaramond text-xl font-bold text-antiqueblack relative z-10">
+                {index + 1}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
