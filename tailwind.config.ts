@@ -29,13 +29,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        cormorantGaramond: ['"Cormorant Garamond"', "sans-serif"],
-        lobster: ["Lobster", "sans-serif"],
-        robotoMono: ["Roboto Mono", "sans-serif"],
-        abrilFatface: ["Abril Fatface", "sans-serif"],
-        charm: ["Charm", "sans-serif"],
-        commissioner: ["Commissioner", "sans-serif"],
-        ibmPlexSans: ["IBM Plex Sans", "sans-serif"],
+        lobster: "var(--font-lobster), cursive",
+        charm: "var(--font-charm), cursive",
+        martianMono: "var(--font-martianMono), sans-serif",
+        ballet: "var(--font-ballet), cursive",
+        cormorantGaramond: "var(--font-cormorantGaramond), serif",
+        spaceGrotesk: "var(--font-spaceGrotesk), sans-serif",
+        playfairDisplay: "var(--font-playfairDisplay), serif",
+        roboto: "var(--font-roboto), sans-serif",
+        sail: "var(--font-sail), cursive",
       },
       colors: {
         // whites
@@ -56,6 +58,8 @@ export default {
           "inset 0 1px 0 0 rgba(125,125,125,0.35), 1px 1px 1px 0 rgba(0,0,0,0.35)",
         default:
           "inset 0 4px 4px 0 rgba(0,0,0,0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25)",
+        definition:
+          "inset 1px 1px 2px 5px rgba(64,64,79,0.15), inset -1px -1px 2px 2px rgba(64,64,79,0.15)",
       },
       minHeight: {
         landscape: "var(--landscape-min-height)",
@@ -82,7 +86,7 @@ export default {
           "border-color": theme("colors.palemint"),
         },
         ".bio-label": {
-          "font-family": "Roboto Mono",
+          "font-family": "Martian Mono",
           "font-size": "0.75rem",
           "font-weight": "normal",
           color: theme("colors.lightgreen"),
@@ -90,7 +94,6 @@ export default {
           "border-radius": "4px",
           padding: "1px",
         },
-        ".bio-text": {},
         ".footer-dynamic": {
           "margin-top": "var(--footer-margin)",
         },
@@ -101,25 +104,25 @@ export default {
           "box-shadow": "inset 0 2px 3px 0 rgba(0,0,0,0.05)",
         },
         ".motto-text-shadow": {
-          "text-shadow": "1px 1px 0 rgba(120, 120, 120, 0.95)",
+          "text-shadow": "1px 1px 0 rgba(64, 64, 79, 0.95)",
           color: theme("colors.bonewhite"),
-        },
-        ".motto-shadow": {
-          "box-shadow":
-            "inset 1px 1px 0 0 rgba(120,120,120,0.15), inset -1px -1px 0 0 rgba(120,120,120,0.15)",
-          "border-color": theme("colors.seashell"),
         },
         ".header-shadow": {
           "text-shadow": "1px 1px 1px rgba(25, 25, 112, 1)",
           color: theme("colors.aliceblue"),
           "font-size": "30px",
           "text-align": "center",
-          "font-family": '"Lobster", serif, italic',
+          "font-family": "var(--font-lobster), serif, italic",
+        },
+        ".site-wrap": {
+          position: "relative",
+          width: "100%",
+          height: "100%",
         },
         ".subtopic-text": {
           color: "#777",
           "font-size": "12px",
-          "font-family": "IBM Plex Sans",
+          "font-family": "var(--font-spaceGrotesk), sans-serif",
         },
         ".spacer": {
           height: "50px",

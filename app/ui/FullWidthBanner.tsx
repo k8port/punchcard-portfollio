@@ -1,5 +1,6 @@
 import React from "react";
 import IconRow from "./IconRow";
+import { lobster } from "../fonts";
 
 interface FullWidthBannerProps {
   paragraphText: string;
@@ -15,11 +16,16 @@ const FullWidthBanner: React.FC<FullWidthBannerProps> = ({
   icons,
 }) => {
   return (
-    <div className={`relative w-full h-[100px] ${className}`}>
+    <div
+      className={`relative w-full h-[100px] ${className}`}
+      data-testid="banner-container"
+    >
       <div className="absolute inset-0">
-        <div className="flex items-center justify-center text-pearl font-lobster text-xl">
-          <p className="font-lobster text-2xl">
-            <span className="text-sm text-center mb-1 font-ibmPlexSans">
+        <div
+          className={`${lobster.className} flex items-center justify-center text-pearl text-xl`}
+        >
+          <p className={`${lobster.className} font-lobster text-2xl`}>
+            <span className="text-sm text-center mb-1 font-sans">
               {paragraphText}
             </span>
             {headingText}

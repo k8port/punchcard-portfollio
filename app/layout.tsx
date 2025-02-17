@@ -6,14 +6,8 @@ import Footer from "./ui/Footer";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import {
-  cormorantGaramond,
-  robotoMono,
-  lobster,
-  abrilFatface,
-  charm,
-} from "./styles/fonts";
 import styles from "./styles/modules/layout.module.css";
+import { spaceGrotesk } from "./fonts";
 
 export const metadata: Metadata = {
   title: "k8port | Kate Portalatin",
@@ -27,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full w-full scroll-auto">
+    <html lang="en">
       <Head>
         <title>Kate Portalatin | Software Engineer</title>
         <meta
@@ -43,26 +37,16 @@ export default function RootLayout({
         <meta property="og:url" content="https://k8port.github.io" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body
-        className={`
-          ${cormorantGaramond.className} 
-          ${robotoMono.className} 
-          ${lobster.className} 
-          ${abrilFatface.className}
-          ${charm.className}
-        `}
-      >
-        <div>
-          <Header className="sticky top-0 z-50" />
-          <main
-            className={`grid grid-cols-12 grid-rows-8 gap-5 mx-8 min-h-screen ${styles.mainContainer}`}
-          >
-            {children}
-            <Analytics />
-            <SpeedInsights />
-          </main>
-          <Footer className="footer-dynamic" />
-        </div>
+      <body className={` ${spaceGrotesk.className} `}>
+        <Header className="fixed top-0 z-50 mb-4" />
+        <main
+          className={`grid grid-cols-12 gap-2 scroll-smooth ${styles.mainContainer}`}
+        >
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </main>
+        <Footer className="fixed bottom-0 z-50" />
       </body>
     </html>
   );

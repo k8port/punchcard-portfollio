@@ -1,9 +1,14 @@
 import React from "react";
-import Punchcard from "./punchcard/Punchcard";
+import Punchcard from "./Punchcard";
 import NumberPad from "./NumberPad";
 import FullWidthBanner from "./FullWidthBanner";
+import { lobster } from "../fonts";
 
-export default function Projects() {
+interface ProjectProps {
+  className?: string;
+}
+
+export default function Projects({ className }: ProjectProps) {
   const title = "Projects";
   const icons = [
     { name: "Hammer", className: "text-lightgreen" },
@@ -12,7 +17,7 @@ export default function Projects() {
     { name: "Person Digging", className: "text-misspiggy" },
   ];
   return (
-    <Punchcard className="relative w-full mx-auto h-auto p-4">
+    <Punchcard className={`${className} w-full`}>
       <FullWidthBanner
         paragraphText="This section is..."
         headingText="Under Construction"
@@ -21,12 +26,16 @@ export default function Projects() {
       />
       {/* Outer Container */}
       <div className="z-10">
-        <h2 className="text-stroke-header sm:text-3x header-shadow my-4">
+        <h2
+          className={`${lobster.className} font-lobster text-stroke-header sm:text-3xl header-shadow my-4`}
+        >
           {" "}
           {title}{" "}
         </h2>
-        {/* Project Circles */}
-        <NumberPad />
+        <div className="w-full">
+          {/* Project Circles */}
+          <NumberPad />
+        </div>
       </div>
     </Punchcard>
   );

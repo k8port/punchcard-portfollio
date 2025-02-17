@@ -1,7 +1,7 @@
 // app/ui/PunchCard.tsx
-import Punchcard from "./punchcard/Punchcard";
+import Punchcard from "./Punchcard";
 import React from "react";
-
+import { lobster, martianMono } from "../fonts";
 interface AboutMeProps {
   label: string;
   className?: string;
@@ -32,38 +32,45 @@ interface AboutMeProps {
 export default function AboutMe({ label, content, className }: AboutMeProps) {
   return (
     <Punchcard
-      className={className}
+      data-testid="about-me"
+      className={`${className} h-full`}
       imageSrc="/images/punchcard/punchcard_mintgreenV.png"
     >
-      <h2 className="text-stroke-header pb-2 header-shadow text-sm my-1">
+      <h2
+        className={`${lobster.className} font-lobster text-stroke-header pb-2 header-shadow text-sm my-1`}
+      >
         {label}
       </h2>
 
-      <div className="bg-bonewhite/75 font-commissioner text-xs text-pretty p-2 rounded-lg">
+      <div className="bg-bonewhite/75 text-xs text-pretty md:text-base p-2 rounded-lg">
         <div className="pb-2">
-          <span className="bio-label mr-2">[{content.who.label}]:</span> <br />{" "}
-          <span className="bio-text">{content.who.text}</span>
+          <span
+            className={`${martianMono.className} font-martianMono bio-label mr-2`}
+          >
+            [{content.who.label}]:
+          </span>
+          <span className="break-words">{content.who.text}</span>
         </div>
-        <p className="my-4 pb-2">
+        <div className="my-4 pb-2">
           <span className="bio-label mr-2">[{content.what.label}]:</span> <br />{" "}
-          <span className="bio-text">{content.what.text}</span>
-        </p>
-        <p className="my-4 pb-2">
+          <span className="break-words">{content.what.text}</span>
+        </div>
+        <div className="my-4 pb-2">
           <span className="bio-label mr-2 mb-4">[{content.why.label}]:</span>{" "}
-          <br /> <span className="bio-text">{content.why.text}</span>
-        </p>
-        <p className="my-4 pb-2">
+          <span className="break-words">{content.why.text}</span>
+        </div>
+        <div className="my-4 pb-2">
           <span className="bio-label mr-2">[{content.where.label}]:</span>
-          <br /> <span className="bio-text">{content.where.text}</span>
-        </p>
-        <p className="my-4 pb-2">
+          <span className="break-words">{content.where.text}</span>
+        </div>
+        <div className="my-4 pb-2">
           <span className="bio-label mr-2">[{content.when.label}]:</span> <br />{" "}
-          <span className="bio-text">{content.when.text}</span>
-        </p>
-        <p className="my-4 pb-2">
+          <span className="break-words">{content.when.text}</span>
+        </div>
+        {/* <p className="my-4 pb-2">
           <span className="bio-label mr-2">[{content.how.label}]:</span> <br />{" "}
           <span className="bio-text">{content.how.text}</span>
-        </p>
+        </p> */}
       </div>
     </Punchcard>
   );

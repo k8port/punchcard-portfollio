@@ -5,8 +5,8 @@ const NumberPad: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full">
-        <div className="grid grid-cols-3 gap-2 w-fit p-2">
+      <div className="w-full flex justify-center items-center">
+        <div className="grid grid-cols-3 gap-2 w-full max-w-md p-2">
           {gridItems.map((_, index) => (
             <div
               key={index}

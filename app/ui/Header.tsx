@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BsGearWideConnected } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { lobster } from "../fonts";
 
 interface HeaderProps {
   className?: string;
@@ -20,19 +21,22 @@ export default function Header({ className }: HeaderProps) {
 
   const navItems = [
     { label: "Home", href: "#home" },
+    { label: "About Me", href: "#about-me" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
-    { label: "Resume", href: "#resume" },
+    { label: "Resume/CV", href: "#resume" },
     { label: "Contact", href: "#contact" },
   ];
 
   return (
     <header
       className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-electricgrey shadow-lg 
-      font-ibmPlexSans text-offwhite text-xl drop-shadow-section px-0 py-6 ${className}`}
+      font-ibmPlexSans text-offwhite text-xl drop-shadow-section px-0 py-3 ${className}`}
     >
       <div className="flex flex-grow w-full items-center justify-between px-4">
-        <span className="font-lobster text-base sm:text-lg md:text-2xl">
+        <span
+          className={`${lobster.className} font-lobster text-base sm:text-lg md:text-2xl`}
+        >
           Kate Portalatin - Software Engineer
         </span>
 

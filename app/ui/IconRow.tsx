@@ -6,23 +6,23 @@ interface IconRowProps {
 }
 
 const IconRow: React.FC<IconRowProps> = ({ icons }) => {
-
-    return (
-        <div className="flex items-center justify-center gap-2 mt-2">
-            {icons.map((icon, index) =>{
-                const IconComponent = getFontAwesomeIcon(icon.name);
-                return (
-                    IconComponent && (
-                        <IconComponent 
-                            key={index}
-                            className={`font-ibmPlexSans text-base ${icon.className || "text-antiqueblack"}`}
-                        />
-                    )
-                )
-            })}
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center gap-2 mt-2">
+      {icons.map((icon, index) => {
+        const IconComponent = getFontAwesomeIcon(icon.name);
+        return (
+          IconComponent && (
+            <IconComponent
+              key={index}
+              className={`font-sans ext-base ${
+                icon.className || "text-antiqueblack"
+              }`}
+            />
+          )
+        );
+      })}
+    </div>
+  );
 };
-
 
 export default IconRow;

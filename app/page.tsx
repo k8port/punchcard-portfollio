@@ -2,45 +2,51 @@ import AboutMe from "./ui/AboutMe";
 import Projects from "./ui/Projects";
 import Logo from "./ui/Logo";
 import { getContent } from "./lib/utils";
-import InterimSkillsPanel from "./ui/skills/InterimSkillsPanel";
+import InterimSkillsPanel from "./ui/InterimSkillsPanel";
+import styles from "./styles/modules/page.module.css";
 
 export default async function HomePage() {
   const content = await getContent();
   const branding = content.sections.branding;
-  // const competencies = content.sections.skillsPanel;
   const bio = content.sections.aboutMe;
+  // const competencies = content.sections.skillsPanel;
 
   return (
     <>
       {/* Logo (Top-left on Desktop, first section on Mobile) */}
-      <section className="col-span-3 col-start-1 row-span-2">
-        <Logo
-          logo={branding}
-          className="bg-babypowder/65 rounded-lg shadow-lg subtopic-text 
-          flex flex-col items-center my-8 p-4"
-        />
+      <section className="col-span-5 mt-12">
+        <div className="pt-12">
+          <Logo
+            logo={branding}
+            className={`${styles.pageContainer}
+              flex flex-row 
+              items-center justify-center 
+              p-4
+            `}
+          />
+        </div>
       </section>
-
-      {/* About Me span cols 1-4, span 5 rows */}
-      <section className="col-span-7 col-start-5 row-start-5 row-span-6">
-        <AboutMe
-          label={bio.label}
-          content={bio.content}
-          className="aspect-[3/5] my-8 p-2"
-        />
-      </section>
-
-      {/* Projects spans right side of page */}
-      <section className="col-span-4 col-start-1 row-start-5">
-        <div className="my-8 p-4">
-          <Projects />
+      {/* SkillsPanel span cols 5-12, top right */}
+      <section className="col-span-7 mt-24">
+        <div className="flex flex-col gap-4">
+          <InterimSkillsPanel className={`${styles.pageContainer}`} />
         </div>
       </section>
 
-      {/* SkillsPanel span cols 5-12, span 4 rows */}
-      <section className="col-span-8 col-start-4 row-start-1 row-span-6">
-        <div className="col-start-5 row-start-1">
-          <InterimSkillsPanel />
+      {/* Bottom Row (Desktop) */}
+      {/* Projects - bottom left */}
+      <section className="col-span-6 flex flex-col gap-4 ml-16">
+        <Projects className="p-4 my-8 w-full" />
+      </section>
+
+      {/* About Me - bottom right */}
+      <section className="col-span-6 p-5">
+        <div className="flex justify-center items-start p-4">
+          <AboutMe
+            label={bio.label}
+            className="p-4 my-8"
+            content={bio.content}
+          />
         </div>
       </section>
     </>
